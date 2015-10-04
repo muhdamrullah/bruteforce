@@ -15,7 +15,7 @@ for ele in itertools.product("0123456789abcdefghijklmnopqrstuvwxyz",repeat=6):
     payloads.append(mayload)
     counter += 1
     initial_ping += 1
-    if (0 < initial_ping < 500000)
+    if (0 < initial_ping < 500000):
         counter += 1
         if (counter == 500):
             unsent_request = []
